@@ -74,22 +74,22 @@ j::
  run powershell.exe -windowstyle hidden ./ToggleSoundDevice.ps1,,hide
 return	
 
-; Toggle EQ
-m::
- FileRead, eqActive, %ProgramFiles%\EqualizerAPO\config\eqActive.txt
- if (eqActive = "false") {
-   FileDelete, %ProgramFiles%\EqualizerAPO\config\config.txt
-   FileAppend, Include: headphones\headphones.txt`nInclude: speakers\speakers.txt, %ProgramFiles%\EqualizerAPO\config\config.txt
-   FileDelete, %ProgramFiles%\EqualizerAPO\config\eqActive.txt
-   FileAppend, true, %ProgramFiles%\EqualizerAPO\config\eqActive.txt
- } else if (eqActive = "true") {
-   FileDelete, %ProgramFiles%\EqualizerAPO\config\config.txt
-   FileDelete, %ProgramFiles%\EqualizerAPO\config\eqActive.txt
-   FileAppend, false, %ProgramFiles%\EqualizerAPO\config\eqActive.txt
- } else {
-    MsgBox 3 name is %audioProfileSelected%
- }
-return
+; ; Toggle EQ
+; m::
+;  FileRead, eqActive, %ProgramFiles%\EqualizerAPO\config\eqActive.txt
+;  if (eqActive = "false") {
+;    FileDelete, %ProgramFiles%\EqualizerAPO\config\config.txt
+;    FileAppend, Include: headphones\headphones.txt`nInclude: speakers\speakers.txt, %ProgramFiles%\EqualizerAPO\config\config.txt
+;    FileDelete, %ProgramFiles%\EqualizerAPO\config\eqActive.txt
+;    FileAppend, true, %ProgramFiles%\EqualizerAPO\config\eqActive.txt
+;  } else if (eqActive = "true") {
+;    FileDelete, %ProgramFiles%\EqualizerAPO\config\config.txt
+;    FileDelete, %ProgramFiles%\EqualizerAPO\config\eqActive.txt
+;    FileAppend, false, %ProgramFiles%\EqualizerAPO\config\eqActive.txt
+;  } else {
+;     MsgBox 3 name is %audioProfileSelected%
+;  }
+; return
 
 
 
