@@ -9,11 +9,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
 CapsLock::
-	Menu, Tray, Icon , .\icons\Lock.ico, , 
+	; Menu, Tray, Icon , .\icons\Lock.ico, , 
 	KeyWait, CapsLock
 	If (A_PriorKey="CapsLock")
 		SetCapsLockState, Off
-	Menu, Tray, Icon , .\icons\Unlock.ico, , 
+	; Menu, Tray, Icon , .\icons\Unlock.ico, , 
 Return
 
 #If, GetKeyState("CapsLock", "P") ;Your CapsLock hotkeys go below
